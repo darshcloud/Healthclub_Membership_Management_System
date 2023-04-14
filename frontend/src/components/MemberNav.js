@@ -3,7 +3,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Outlet, Route, Routes} from "react-router-dom";
 import {MemberHome} from "./memberhome";
-import {Enroll} from "./Enroll";
 
 function MemberTopNav() {
     return (
@@ -14,14 +13,12 @@ function MemberTopNav() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="/memberhome/home">Home</Nav.Link>
-                            <Nav.Link href="/memberhome/enroll">Enroll</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
             <Routes>
                 <Route path="home" element={<MemberHome />} />
-                <Route path="Enroll" element={<Enroll />} />
             </Routes>
             <Outlet />
         </>
